@@ -27,8 +27,7 @@ html {
 }
 
 body {
-  background: rgb(225,138,255);
-  background: linear-gradient(135deg, rgba(225,138,255,1) 0%, rgba(166,0,255,1) 35%, rgba(255,0,255,1) 100%);
+  background: rgb(30, 0, 20);
   padding: env(safe-area-inset-top) env(safe-area-inset-right)
     env(safe-area-inset-bottom) env(safe-area-inset-left);
   color: var(--text-color);
