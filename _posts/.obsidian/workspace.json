@@ -159,13 +159,23 @@
               "icon": "lucide-list",
               "title": "2024-11-25-첫-개시물 개요"
             }
+          },
+          {
+            "id": "4c83ba8f69821132",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
