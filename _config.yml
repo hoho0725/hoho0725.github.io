@@ -122,7 +122,7 @@ comments:
     repo: hoho0725/hoho0725.github.io
     repo_id: R_kgDONUWQaQ
     category: Comment
-    category_id:DIC_kwDONUWQac4Ckovp
+    category_id: DIC_kwDONUWQac4Ckovp
     mapping: # optional, default to 'pathname'
     strict: # optional, default to '0'
     input_position: # optional, default to 'bottom'
