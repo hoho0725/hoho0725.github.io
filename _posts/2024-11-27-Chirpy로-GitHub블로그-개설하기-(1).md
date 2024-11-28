@@ -84,3 +84,4 @@ url: "https://hoho0725.github.io"
 > Jekyll의 Chirpy Theme로 깃허브 블로그를 시작하는 방법을 소개합니다. 
 {: .prompt-info }
 
+![[Pasted image 20241128193237.png]]
