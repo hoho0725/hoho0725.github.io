@@ -37,14 +37,12 @@ Unity 프로젝트에서 **전략 패턴(Strategy Pattern)** 을 구현하면 �
 ### 3.1 인터페이스 정의
 
 먼저, 모든 공격 전략이 따라야 할 인터페이스를 정의합니다.
-
 ```c#
 public interface IAttackStrategy
 {
     void Attack(GameObject attacker);
 }
 ```
-
 이 인터페이스는 모든 공격 전략이 구현해야 하는 `ExecuteAttack` 메서드를 포함합니다.
 
 ---
@@ -54,7 +52,7 @@ public interface IAttackStrategy
 다양한 공격 전략을 ScriptableObject를 통해 구현합니다.다양한 공격 전략을 ScriptableObject를 통해 구현합니다. 
 #### ScriptableObject로 기본 공격전략 구현
 
-```
+```c#
 public abstract class AttackStrategy : ScriptableObject, IAttackStrategy
 { 
     public abstract void Attack(GameObject attacker); 
