@@ -61,7 +61,7 @@ public abstract class AttackStrategy : ScriptableObject, IAttackStrategy
 
 #### 근접 공격 전략
 
-```C#
+```c#
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Strategies/MeleeAttack")]
@@ -77,7 +77,7 @@ public class MeleeAttackStrategy : AttackStrategy
 
 #### 원거리 공격 전략
 
-```C#
+```c#
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Strategies/RangedAttack")]
@@ -97,7 +97,7 @@ public class RangedAttackStrategy : AttackStrategy
 
 `Character` 클래스는 현재 사용 중인 공격 전략을 보유하고 이를 실행하는 역할을 합니다. ScriptableObject를 사용하였기 때문에 인스펙터창에서 바로 설정할 수 있고 디버깅도 쉽습니다.
 
-```C#
+```c#
 using UnityEngine;
 
 public class Character : MonoBehaviour
@@ -129,7 +129,7 @@ public class Character : MonoBehaviour
 
 #### 전략 변경 스크립트
 
-```C#
+```c#
 using UnityEngine;
 
 public class StrategyTester : MonoBehaviour
