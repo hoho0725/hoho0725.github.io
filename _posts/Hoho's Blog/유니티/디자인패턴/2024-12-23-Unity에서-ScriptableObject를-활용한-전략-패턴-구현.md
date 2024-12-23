@@ -14,7 +14,7 @@ tags:
 
 # **Unity에서 ScriptableObject를 활용한 전략 패턴 구현**
 
-Unity 프로젝트에서 **전략 패턴(Strategy Pattern)** 을 구현하면 특정 행동이나 알고리즘을 동적으로 변경할 수 있습니다. 특히 Unity의 **[ScriptableObject]({{ site.baseurl }}/posts/2024-12-23-Unity-ScriptableObject-효율적인-데이터-관리-방법)를** 활용하면 더욱 간결하고 직관적인 방식으로 이 패턴을 적용할 수 있습니다. 이 글에서는 **플레이어 공격 방식**을 예로 들어, 전략 패턴을 ScriptableObject와 함께 구현하는 방법을 단계별로 설명합니다.
+Unity 프로젝트에서 **전략 패턴(Strategy Pattern)** 을 구현하면 특정 행동이나 알고리즘을 동적으로 변경할 수 있습니다. 특히 Unity의 **[ScriptableObject]({{ site.baseurl }}/posts/Unity-ScriptableObject-효율적인-데이터-관리-방법)를** 활용하면 더욱 간결하고 직관적인 방식으로 이 패턴을 적용할 수 있습니다. 이 글에서는 **플레이어 공격 방식**을 예로 들어, 전략 패턴을 ScriptableObject와 함께 구현하는 방법을 단계별로 설명합니다.
 
 ---
 
