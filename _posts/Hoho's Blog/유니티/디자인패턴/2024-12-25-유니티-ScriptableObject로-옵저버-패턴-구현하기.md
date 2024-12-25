@@ -17,18 +17,14 @@ tags:
 
 # 1. ScriptableObject란?
 
-ScriptableObject는 유니티에서 제공하는 데이터 저장 및 공유를 위한 클래스입니다.
-
-- 메모리 사용량이 적고, 에디터에서 쉽게 관리할 수 있습니다.
-    
-- 게임 오브젝트에 종속되지 않으므로, 전역 데이터 관리에 유용합니다.
+ScriptableObject의 개념과 장점에 대해서는 **[이 글]({{ site.baseurl }}/posts/Unity-ScriptableObject-%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9D%B8-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EA%B4%80%EB%A6%AC-%EB%B0%A9%EB%B2%95/)을** 참조하세요. 이를 통해 ScriptableObject가 무엇인지 더 깊이 이해할 수 있습니다.
     
 
 ---
 
 # 2. 옵저버 패턴 개념
 
-옵저버 패턴은 하나의 객체(주제)가 변경될 때 이를 관찰하고 있는 다른 객체(옵저버)들에게 알림을 전달하는 패턴입니다.
+옵저버 패턴은 하나의 **객체(주제)가** 변경될 때 이를 관찰하고 있는 다른 **객체(옵저버)들**에게 알림을 전달하는 패턴입니다.
 
 - **주제(Subject)**: 상태를 보유하며, 옵저버를 관리합니다.
     
@@ -43,7 +39,7 @@ ScriptableObject는 유니티에서 제공하는 데이터 저장 및 공유를 
 
 ## (1) 이벤트 시스템 정의
 
-```
+```c#
 using UnityEngine;
 using System;
 
@@ -81,7 +77,7 @@ public class GameEvent : ScriptableObject
 
 ## (2) 옵저버 스크립트 작성
 
-```
+```c#
 using UnityEngine;
 
 public class EventListener : MonoBehaviour
@@ -109,7 +105,7 @@ public class EventListener : MonoBehaviour
 
 ## (3) 주제 스크립트 작성
 
-```
+```c#
 using UnityEngine;
 
 public class EventTrigger : MonoBehaviour
@@ -150,9 +146,21 @@ public class EventTrigger : MonoBehaviour
     
 
 ---
+# 6. ScriptableObject를 활용한 옵저버 패턴의 장점
 
-# 6. 마무리
+1. **재사용성**: ScriptableObject는 여러 컴포넌트에서 쉽게 공유할 수 있어 재사용이 용이합니다.
+    
+2. **유지보수성**: 코드와 데이터가 분리되어 있어, 유지보수가 간단해집니다.
+    
+3. **유연성**: 이벤트와 리스너의 연결을 에디터에서 설정할 수 있어, 런타임 동작을 유연하게 변경할 수 있습니다.
+    
+4. **의존성 감소**: ScriptableObject를 사용함으로써 클래스 간 강한 결합을 피할 수 있습니다.
+    
+5. **메모리 효율**: 필요한 데이터만 메모리에 로드되므로, 메모리 사용량이 적습니다.
+    
 
-ScriptableObject를 활용한 옵저버 패턴은 간결하고 재사용성이 높은 코드 구조를 제공합니다. 이를 통해 유니티 프로젝트에서 이벤트 기반 시스템을 효과적으로 설계해 보세요. 필요에 따라 로직을 확장하거나 커스터마이징할 수도 있습니다.
+---
 
-질문이나 피드백이 있다면 댓글로 남겨주세요!
+# 7. 결론
+
+ScriptableObject를 활용한 옵저버 패턴은 **간결하고 재사용성**이 높은 코드 구조를 제공합니다. 이를 통해 유니티 프로젝트에서 이벤트 기반 시스템을 효과적으로 설계해 보세요. 필요에 따라 로직을 확장하거나 커스터마이징할 수도 있습니다.
