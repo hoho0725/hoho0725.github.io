@@ -9,17 +9,16 @@ tags:
   - 유니티
   - ScriptableObject
 ---
-# Unity ScriptableObject: 효율적인 데이터 관리 방법
 
 유니티(Unity)에서 데이터 관리 및 공유는 게임 개발의 핵심적인 요소 중 하나입니다. ScriptableObject는 유니티에서 제공하는 강력한 기능으로, 데이터의 효율적인 관리와 재사용성을 극대화할 수 있습니다. 이 글에서는 ScriptableObject의 기본 개념, 장점, 그리고 실사용 예제를 통해 이를 효과적으로 활용하는 방법을 알아보겠습니다.
 
 ---
 
-## 1. ScriptableObject란 무엇인가?
+# 1. ScriptableObject란 무엇인가?
 
 ScriptableObject는 유니티에서 제공하는 클래스의 한 종류로, 데이터의 저장 및 관리를 위한 객체입니다. MonoBehaviour와 달리 프로젝트 수준에서 데이터를 저장하고, 메모리 사용을 최소화하면서 데이터를 유지할 수 있습니다.
 
-### 주요 특징
+## 주요 특징
 
 - **씬 독립성**: ScriptableObject는 씬에 종속되지 않으며, 프로젝트의 어디서든 접근 가능.
     
@@ -33,7 +32,7 @@ ScriptableObject는 유니티에서 제공하는 클래스의 한 종류로, 데
 
 ---
 
-## 2. ScriptableObject의 장점
+# 2. ScriptableObject의 장점
 
 1. **데이터의 중앙화** ScriptableObject를 사용하면 데이터를 중앙에서 관리할 수 있습니다. 예를 들어, 게임의 설정 값이나 캐릭터 속성 데이터를 ScriptableObject에 저장하면, 여러 씬에서 동일한 데이터를 사용할 수 있습니다. 이를 통해 안티패턴으로 구분되기도 하는 싱글톤을 우회하여 설계할 수 있습니다. 
     
@@ -46,9 +45,9 @@ ScriptableObject는 유니티에서 제공하는 클래스의 한 종류로, 데
 
 ---
 
-## 3. ScriptableObject 생성 방법
+# 3. ScriptableObject 생성 방법
 
-### 3.1 ScriptableObject 클래스 정의
+## 3.1 ScriptableObject 클래스 정의
 
 다음은 ScriptableObject를 정의하는 간단한 코드입니다:
 
@@ -64,7 +63,7 @@ public class GameData : ScriptableObject
 ```
 
 `[CreateAssetMenu]` 어트리뷰트를 사용하면 Unity Editor에서 ScriptableObject를 쉽게 생성할 수 있습니다.
-#### 유니티6 버전 ScriptableObject 클래스 정의
+### 유니티6 버전 ScriptableObject 클래스 정의
 유니티6부터 ScriptableObject를 더욱 쉽게 생성 할 수가 있습니다.
 ![](https://i.imgur.com/4hA6B6F.png)
 
@@ -81,7 +80,7 @@ public class NewScriptableObjectScript : ScriptableObject
 
 ---
 
-### 3.2 ScriptableObject Asset 생성
+## 3.2 ScriptableObject Asset 생성
 
 1. Unity Editor에서 `Assets` 폴더로 이동.
     
@@ -93,15 +92,15 @@ public class NewScriptableObjectScript : ScriptableObject
 
 ---
 
-## 4. ScriptableObject 사용 예제
+# 4. ScriptableObject 사용 예제
 
 다음은 ScriptableObject를 사용하는 간단한 예제입니다:
 
-### 게임 데이터 공유
+## 게임 데이터 공유
 
 게임의 설정 데이터를 공유하기 위해 ScriptableObject를 활용할 수 있습니다.
 
-#### GameManager 코드 예시
+### GameManager 코드 예시
 
 ```c#
 using UnityEngine;
@@ -121,7 +120,7 @@ Inspector에서 `GameData` ScriptableObject를 연결하면, `GameManager`에서
 
 ---
 
-## 5. 언제 ScriptableObject를 사용해야 할까?
+# 5. 언제 ScriptableObject를 사용해야 할까?
 
 - **전역 데이터 관리**: 여러 씬에서 공통적으로 사용하는 데이터를 저장할 때.
     
@@ -132,7 +131,7 @@ Inspector에서 `GameData` ScriptableObject를 연결하면, `GameManager`에서
 
 ---
 
-## 6. ScriptableObject 사용 시 주의사항
+# 6. ScriptableObject 사용 시 주의사항
 
 1. **데이터 동기화 문제** ScriptableObject는 참조를 통해 데이터를 공유하므로, 여러 스크립트에서 데이터를 변경하면 의도치 않은 결과를 초래할 수 있습니다.
     
@@ -141,6 +140,6 @@ Inspector에서 `GameData` ScriptableObject를 연결하면, `GameManager`에서
 
 ---
 
-## 7. 결론
+# 7. 결론
 
 ScriptableObject는 유니티에서 데이터 관리와 공유를 간소화하는 데 매우 유용한 도구입니다. 이를 통해 코드 구조를 개선하고, 재사용성을 높이며, 프로젝트의 복잡성을 줄일 수 있습니다. ScriptableObject를 적절히 활용하여 효율적인 게임 개발을 경험해 보세요.
