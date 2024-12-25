@@ -41,12 +41,12 @@ body {
   h#{$i} {
     @extend %heading;
     $colors: (
-      --h1-color: #ff6b6b; // h1: 빨간색
-      --h2-color: #f9a825; // h2: 주황색
-      --h3-color: #8bc34a; // h3: 초록색
-      --h4-color: #03a9f4; // h4: 파란색
-      --h5-color: #ab47bc; // h5: 보라색
-      --h6-color: #9e9e9e; // h6: 회색
+      1: #ff6b6b, // h1: 빨간색
+      2: #f9a825, // h2: 주황색
+      3: #8bc34a, // h3: 초록색
+      4: #03a9f4, // h4: 파란색
+      5: #ab47bc, // h5: 보라색
+      6: #9e9e9e  // h6: 회색
     );
 
     color: map-get($colors, $i);
