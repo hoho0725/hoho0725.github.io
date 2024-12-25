@@ -41,12 +41,12 @@ body {
   h#{$i} {
     @extend %heading;
     $colors: (
-      1: #ff6b6b, // h1: 빨간색
-      2: #f9a825, // h2: 주황색
-      3: #8bc34a, // h3: 초록색
-      4: #03a9f4, // h4: 파란색
-      5: #ab47bc, // h5: 보라색
-      6: #9e9e9e  // h6: 회색
+      1: --h1-color, // h1: 빨간색
+      2: --h2-color, // h2: 주황색
+      3: --h3-color, // h3: 초록색
+      4: --h4-color, // h4: 파란색
+      5: --h5-color, // h5: 보라색
+      6: --h6-color  // h6: 회색
     );
 
     color: map-get($colors, $i);
@@ -76,6 +76,12 @@ body {
       }
     } @else {
       font-size: 1.05rem;
+    }
+  }
+  header h1 {
+    @if $i == 1 {
+      color: var(--heading-color); // 다른 색상 (예: 파란색)
+      font-size: $base-font-size * 1.1; // 약간 더 크게 설정
     }
   }
 }
