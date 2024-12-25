@@ -42,6 +42,10 @@ ScriptableObject는 유니티에서 제공하는 클래스의 한 종류로, 데
 3. **코드 간소화** 데이터를 별도의 ScriptableObject로 분리하면, 코드 간결성과 유지보수성이 향상됩니다. 데이터와 로직이 분리되므로, 더 깨끗한 코드 구조를 유지할 수 있습니다.
     
 4. **메모리 효율 증가** Monobehaviour는 인스턴스를 각각 모두 생성하지만 ScriptableObject는 프로젝트 수준으로 존재하여 하나를 참조하여 사용하기에 메모리 효율이 증가합니다.
+	
+
+---
+
 ## 3. ScriptableObject 생성 방법
 
 ### 3.1 ScriptableObject 클래스 정의
