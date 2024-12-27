@@ -15,14 +15,22 @@ tags:
 
 ---
 
-# 1. ScriptableObject란?
+## 1. ScriptableObject란?
 
 ScriptableObject의 개념과 장점에 대해서는 **[이 글]({{ site.baseurl }}/posts/Unity-ScriptableObject-%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9D%B8-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EA%B4%80%EB%A6%AC-%EB%B0%A9%EB%B2%95/)을** 참조하세요. 이를 통해 ScriptableObject가 무엇인지 더 깊이 이해할 수 있습니다.
-    
+
+> [!info] info
+> The benefit of reading the author information from the file `_data/authors.yml`{: .filepath } is that the page will have the meta tag `twitter:creator`, which enriches the [Twitter Cards](https://developer.twitter.com/en/docs/twitter-for-websites/cards/guides/getting-started#card-and-content-attribution) and is good for SEO.
+{: .prompt-info }
+
+
+
+
+
 
 ---
 
-# 2. 옵저버 패턴 개념
+## 2. 옵저버 패턴 개념
 
 옵저버 패턴은 하나의 **객체(주제)가** 변경될 때 이를 관찰하고 있는 다른 **객체(옵저버)들**에게 알림을 전달하는 패턴입니다.
 
@@ -35,9 +43,9 @@ ScriptableObject의 개념과 장점에 대해서는 **[이 글]({{ site.baseurl
 
 ---
 
-# 3. ScriptableObject 기반 옵저버 패턴 구현
+## 3. ScriptableObject 기반 옵저버 패턴 구현
 
-## (1) 이벤트 시스템 정의
+### (1) 이벤트 시스템 정의
 
 ```c#
 using UnityEngine;
@@ -75,7 +83,7 @@ public class GameEvent : ScriptableObject
 - `UnregisterListener`: 이벤트에서 리스너를 제거합니다.
     
 
-## (2) 옵저버 스크립트 작성
+### (2) 옵저버 스크립트 작성
 
 ```c#
 using UnityEngine;
@@ -103,7 +111,7 @@ public class EventListener : MonoBehaviour
 
 옵저버는 GameEvent를 관찰하며, 이벤트가 발생하면 `OnEventRaised` 메서드를 호출합니다.
 
-## (3) 주제 스크립트 작성
+### (3) 주제 스크립트 작성
 
 ```c#
 using UnityEngine;
@@ -123,7 +131,7 @@ public class EventTrigger : MonoBehaviour
 
 ---
 
-# 4. 에디터 설정
+## 4. 에디터 설정
 
 1. `GameEvent` ScriptableObject 생성: 프로젝트 창에서 우클릭 > Create > Events > GameEvent.
     
@@ -136,7 +144,7 @@ public class EventTrigger : MonoBehaviour
 
 ---
 
-# 5. 활용 사례
+## 5. 활용 사례
 
 - **UI 시스템**: 버튼 클릭 시 여러 UI 업데이트 처리.
     
@@ -146,7 +154,7 @@ public class EventTrigger : MonoBehaviour
     
 
 ---
-# 6. ScriptableObject를 활용한 옵저버 패턴의 장점
+## 6. ScriptableObject를 활용한 옵저버 패턴의 장점
 
 1. **재사용성**: ScriptableObject는 여러 컴포넌트에서 쉽게 공유할 수 있어 재사용이 용이합니다.
     
@@ -161,6 +169,6 @@ public class EventTrigger : MonoBehaviour
 
 ---
 
-# 7. 결론
+## 7. 결론
 
 ScriptableObject를 활용한 옵저버 패턴은 **간결하고 재사용성**이 높은 코드 구조를 제공합니다. 이를 통해 유니티 프로젝트에서 이벤트 기반 시스템을 효과적으로 설계해 보세요. 필요에 따라 로직을 확장하거나 커스터마이징할 수도 있습니다.
