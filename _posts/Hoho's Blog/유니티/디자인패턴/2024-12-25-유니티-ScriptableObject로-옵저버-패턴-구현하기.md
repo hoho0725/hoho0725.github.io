@@ -19,9 +19,6 @@ tags:
 
 ScriptableObject의 개념과 장점에 대해서는 **[이 글]({{ site.baseurl }}/posts/Unity-ScriptableObject-%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9D%B8-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EA%B4%80%EB%A6%AC-%EB%B0%A9%EB%B2%95/)을** 참조하세요. 이를 통해 ScriptableObject가 무엇인지 더 깊이 이해할 수 있습니다.
 
-> [!info] info
-> The benefit of reading the author information from the file `_data/authors.yml`{: .filepath } is that the page will have the meta tag `twitter:creator`, which enriches the [Twitter Cards](https://developer.twitter.com/en/docs/twitter-for-websites/cards/guides/getting-started#card-and-content-attribution) and is good for SEO.
-{: .prompt-info }
 
 
 
